@@ -53,4 +53,5 @@ Generate an API key in the Seq server web interface and add as an additional arg
 
 ## Supress default startup logging
 
-The SeqLogger automatically logs 
+The SeqLogger automatically logs default information at when the logger is created. Suppress this by adding a `false` argument after the API key.
+
