@@ -10,7 +10,7 @@ export class SeqLogger extends Logger {
     protected seqLogger: StructuredLogger
     protected levelSwitch: DynamicLevelSwitch
     protected instanceId = uuidv4()
-    constructor(protected hostName: string, protected appName: string, version: string, level: LogLevel = "debug", protected logUrl: string = "http://localhost:5341", protected apiKey: string = "PZL7HqC7ix64EPvqXGkO", skipStartLogging: boolean = false) {
+    constructor(protected hostName: string, protected appName: string, version: string, level: LogLevel = "debug", protected logUrl: string = "http://localhost:5341", protected apiKey: string = "PZL7HqC7ix64EPvqXGkO", useStartLogging: boolean = true) {
         super()
         if (!(global as any).fetch)
             (global as any).fetch = fetch
@@ -27,7 +27,7 @@ export class SeqLogger extends Logger {
                 }),
             )
             .create()
-        if (!skipStartLogging) {
+        if (useStartLogging) {
             this.info("Started application \"{appName}\" version {version} on host \"{hostName}\"", appName, version, hostName)
             this.level(level)
         }
