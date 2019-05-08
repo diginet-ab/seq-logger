@@ -31,6 +31,8 @@ Run a Seq instance with ephemeral storage and all services on port 5341:
 
 `docker run -e ACCEPT_EULA=Y -p 5341:80 datalust/seq:latest`
 
+Open http://localhost:5341 in your web browser.
+
 ## NodeJS and web browser application example
 
 ```typescript
@@ -54,4 +56,3 @@ Generate an API key in the Seq server web interface and add as an additional arg
 ## Supress default startup logging
 
 The SeqLogger automatically logs default information at when the logger is created. Suppress this by adding a `false` argument after the API key.
-
