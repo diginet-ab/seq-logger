@@ -1,6 +1,6 @@
 {
   "name": "@diginet/seq-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logging to a Seq server from multiple hosts and applications, for NodeJS and browser",
   "main": "dist/index.js",
   "browser": "dist/index-web.js",
