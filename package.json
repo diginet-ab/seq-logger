@@ -2,6 +2,10 @@
   "name": "@diginet/seq-logger",
   "version": "1.0.4",
   "description": "Logging to a Seq server from multiple hosts and applications, for NodeJS and browser",
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/diginet-ab/seq-logger.git"
+  },
   "main": "dist/index.js",
   "browser": "dist/index-web.js",
   "scripts": {
