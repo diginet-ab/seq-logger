@@ -1,14 +1,12 @@
 const fetch = require("node-fetch");
-import * as structuredLog from "structured-log"
-import seqSink from "structured-log-seq-sink"
-import { DynamicLevelSwitch } from "structured-log/src/dynamicLevelSwitch"
-import { Logger as StructuredLogger } from "structured-log/src/logger"
+import * as structuredLog from "@diginet/structured-log"
+import seqSink from "@diginet/structured-log-seq-sink"
 import { Logger, LogLevel } from "./Logger"
 import uuidv4 from "uuid/v4"
 
 export class SeqLogger extends Logger {
-    protected seqLogger: StructuredLogger
-    protected levelSwitch: DynamicLevelSwitch
+    protected seqLogger: structuredLog.Logger
+    protected levelSwitch: structuredLog.DynamicLevelSwitch
     protected instanceId = uuidv4()
     constructor(protected hostName: string, protected appName: string, version: string, level: LogLevel = "debug", protected logUrl: string = "http://localhost:5341", protected apiKey: string = "PZL7HqC7ix64EPvqXGkO", useStartLogging: boolean = true) {
         super()
