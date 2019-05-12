@@ -1,6 +1,6 @@
 {
   "name": "@diginet/seq-logger",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Logging to a Seq server from multiple hosts and applications, for NodeJS and browser",
   "repository": {
     "type": "git",
